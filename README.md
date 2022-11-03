@@ -34,7 +34,7 @@ After performing step 5, the vulnerable application should now terminate with th
 
 ## Creating the capability-restricted Java interpreter
 The capability restricted Java interpreter was created by first analyzing the set of system calls required for the vulnerable application to
-work properly. This was done using `strace`. In particular, the following command was executed:
+work properly. This was done using `strace`. In particular, the following command was executed from a `root` shell:
 ```
 strace -n -f -o trace.txt ./jdk1.8.0_20/bin/java -cp target/log4shell-1.0-SNAPSHOT.jar com.poc.VulnerableApp VulnerableApp
 ```
