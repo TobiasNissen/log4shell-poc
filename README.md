@@ -51,7 +51,7 @@ Lastly, the extracted system calls were added to the ELF file of the Java interp
 
 Note that the `elf_loader` reads the required system calls added by the `elf_patcher` and installs a seccomp-BPF filter that ensures that only these system calls are allowed for the vulnerable application. 
 
-The approach taken by the `elf_loader` has some limitations, which requires it to be run with `sudo`. These limitations can be overcome by modifying the Linux kernel to allow `execve` to take the capabilities in ELF files into acoount.
+The approach taken by the `elf_loader` has some limitations, which requires it to be run with `sudo`. These limitations can be overcome by modifying the Linux kernel to allow `execve` to take the capabilities in ELF files into account.
 
 
 
