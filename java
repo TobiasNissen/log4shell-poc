@@ -1,1 +1,0 @@
-./jdk1.8.0_20/bin/java_copy
