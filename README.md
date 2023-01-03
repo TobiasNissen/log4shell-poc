@@ -56,5 +56,12 @@ The approach taken by the `elf_loader` has some limitations, which requires it t
 
 
 
+## Miscellaneous
+```
+strace -f -o trace_uml.txt ./jdk1.8.0_20/bin/java_orig -cp target/log4shell-1.0-SNAPSHOT.jar com.poc.VulnerableApp VulnerableApp
+cat trace_uml.txt | tail -n +2 | cut -d" " -f3 | grep -o -e "^[^(]*" | sort | uniq > syscall_names_uml.txt
+< manually remove the invalid lines >
+python3 set_up_access_rights.py ./jdk1.8.0_20/bin/java syscall_names_uml.txt
+```
 
 

