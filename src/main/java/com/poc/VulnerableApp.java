@@ -26,8 +26,8 @@ class VulnerableApp {
 				break;
 			}
 			else {
-	            logger.error("Failed to login, username: {}, password: {}", username, password);
-				System.out.println("Invalid combination of username and password.\nYour information has been logged.\nPlease try again.\n");
+	            logger.error("Failed to login, username: {}", username);
+				System.out.println("Invalid combination of username and password.\nYour username has been logged.\nPlease try again.\n");
 
 			}
     	}
