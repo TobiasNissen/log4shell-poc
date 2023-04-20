@@ -26,7 +26,7 @@ The ELF file of the Java interpreter `./jdk1.8.0_20/bin/java` contains informati
 
 Thus, it is not possible to establish a reverse shell with the same easy approach as described above if the vulnerable application is run in a sandbox, where it is only allowed to execute the system calls that it requires to work properly.
 
-To test this, perform the same steps as described above, but do it in the modified Linux kernel which can be found at: https://github.com/TobiasNissen/linux_kernel_fork. See more details on this below After performing step 5, the vulnerable application should now terminate, and no reverse shell should be established.
+To test this, perform the same steps as described above, but do it in the modified Linux kernel which can be found at: https://github.com/TobiasNissen/linux_kernel_fork. See more details on this below. After performing step 5, the vulnerable application should now terminate, and no reverse shell should be established.
 
 
 ## Running the modified Linux kernel.
